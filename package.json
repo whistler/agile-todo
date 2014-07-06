@@ -1,11 +1,20 @@
 {
-  "name": "todo-app",
-  "version": "0.0.0",
+  "name": "agile-todo",
+  "version": "0.0.1",
+  "type": "app",
   "description": "",
   "main": "Gruntfile.js",
   "dependencies": {
     "grunt": "~0.4.5",
-    "grunt-jsbeautifier": "~0.2.7"
+    "grunt-jsbeautifier": "~0.2.7",
+    "hoodie-server": "^0.9.28",
+    "hoodie-plugin-appconfig": "^0.1.4",
+    "hoodie-plugin-email": "^0.1.5",
+    "hoodie-plugin-users": "^0.1.1"
+  },
+  "files": ["www/"],
+  "engines": {
+    "node": ">=0.10.22"
   },
   "devDependencies": {
     "grunt-jsbeautifier": "~0.2.7",
@@ -13,7 +22,15 @@
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-watch": "~0.6.1"
   },
+  "hoodie": {
+    "plugins": [
+      "hoodie-plugin-appconfig",
+      "hoodie-plugin-email",
+      "hoodie-plugin-users"
+    ]
+  },
   "scripts": {
+    "start": "node node_modules/hoodie-server/bin/start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
