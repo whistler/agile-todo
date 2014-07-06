@@ -1,0 +1,26 @@
+<form ng-submit="newTask()">
+  <input type="text" ng-model="new_task"></input>
+  <button type="submit">New</button>
+</form>
+
+<div ng-repeat="taskList in tasks">
+  <span>{{ taskList.name }}</span>
+  <div class="task-list" ui-sortable="sortableOptions" ng-model="taskList.tasks">
+    <div class="task" ng-repeat="task in taskList.tasks">
+      <div class="margin">      
+        <i class="glyphicon glyphicon-ok" ng-click="completeTask(task)"></i>
+        <i class="delete glyphicon glyphicon-remove" ng-click="deleteTask(task)"></i>
+        <i class="draggable glyphicon glyphicon-align-justify"></i>
+      </div>
+      <div class="margin-line"></div>
+      <div class="task-description" ng-class="{strike: task.completed}">
+        <input type="text" ng-model="task.description"/>
+      </div>
+      <level-selector level="task.points" max="4" class="level-selector"/>
+    </div>
+  </div>
+</div>
+    
+<button ng-click="clear()">Clear</button>
+<button ng-click="log()">Log</button>
+<button ng-click="mapTasks()">map</button>

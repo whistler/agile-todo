@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>AgileTodo</title>
+
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+    <script src="/bower_components/underscore/underscore.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/angular-ui-sortable/sortable.min.js"></script>
+    <script src="/bower_components/ngstorage/ngStorage.min.js"></script>
+    <script src="/bower_components/angular-md5/angular-md5.js"></script>
+    
+    <script src="/lib/level_selector/level_selector.js"></script>
+    
+    <script src="/js/config.js"></script>
+    <script src="/js/run.js"></script>
+    <script src="/js/storage_service.js"></script>
+    <script src="/js/task_service.js"></script>
+    <script src="/js/task_ctrl.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/lib/level_selector/level_selector.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+    
+  </head>
+  <body ng-app="todo-app" class="container-fluid">
+    <h1>Zapire</h1>
+    <div ui-view></div>
+  </body>
+</html>

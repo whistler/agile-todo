@@ -1,0 +1,93 @@
+body, div, span, i {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+.task .draggable {
+  cursor: move;
+}
+
+.task {
+  height: 28px;
+  border-bottom: 1px solid #e6ebed;
+}
+
+.margin {
+  display: inline-block;
+  width: 63px;
+  height: 28px;
+  float: left;
+  padding: 4px;
+  padding-left: 6px;
+}
+
+.margin-line {
+  float: left;
+  display: inline-block;
+  width: 5px;
+  height: 28px;
+  border-left: 1px solid #f3e3e0;
+  border-right: 1px solid #f3e3e0;
+}
+
+.task-description {
+  float: left;
+  display: inline-block;
+  height: 28px;
+  padding: 4px;
+  padding-top: 3px;
+  padding-left: 10px;
+  width: calc(100% - 125px);
+}
+
+.task-description input {
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.task-description input:focus {
+    outline: none;
+}
+
+.task i {
+  opacity: 0;
+}
+
+.task:hover i {
+  opacity: 1;
+  color: #8f8f8f;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.strike input {
+  text-decoration:line-through
+}
+
+.task-list {
+  min-height: 25px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px #747575;
+}
+
+.level-selector {
+  padding-top: 4px;
+  padding-right: 4px;
+  float: right;
+}
+
+body {
+  background-color: #f8f5f5;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #62666c;
+  font-size: 14px;
+}

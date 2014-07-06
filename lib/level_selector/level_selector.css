@@ -1,0 +1,15 @@
+.level-selector {
+  display: inline-block;
+}
+
+.level-selector .level {
+  width: 10px;
+  height: 10px;
+  background-color: #efefef;
+  display: inline-block;
+  margin-right: 1px;
+}
+
+.level-selector .active {
+  background-color: #7f7f7f;
+}
