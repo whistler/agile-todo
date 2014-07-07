@@ -4,26 +4,29 @@ angular.module('todo-app').service('TaskService', function(StorageService, md5) 
     _this = this;
 
     function generateID(task) {
-        var time = (new Date).getTime();
+        var time = (new Date()).getTime();
         return md5.createHash(task.description + time);
     }
-    
+
     function findTaskAndList(task_id) {
-        var found = {}
+        var found = {};
         _.each(_this.tasks, function(task_list) {
             _.each(task_list.tasks, function(task) {
                 if (task.id == task_id) {
-                    found = {task: task, task_list: task_list};
+                    found = {
+                        task: task,
+                        task_list: task_list
+                    };
                 }
             });
         });
         return found;
     }
-    
+
     function findTaskList(task_list_name) {
-        return _.find(_this.tasks, function(task_list){
+        return _.find(_this.tasks, function(task_list) {
             return task_list.name == task_list_name;
-        })
+        });
     }
 
     this.add = function(description, points, list) {
@@ -47,7 +50,7 @@ angular.module('todo-app').service('TaskService', function(StorageService, md5) 
 
     this.removeTask = function(task_id) {
         var result = findTaskAndList(task_id);
-        var index = _.indexOf(_.pluck(result.task_list.tasks, "id"),task_id);
+        var index = _.indexOf(_.pluck(result.task_list.tasks, "id"), task_id);
         result.task_list.tasks.splice(index, 1);
     };
 

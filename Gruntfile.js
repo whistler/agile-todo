@@ -4,22 +4,22 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
-      all: ["js/**/*.js"]
+      all: ['www/js/**/*.js']
     },
     jsbeautifier : {
-        files : ["js/**/*.js"],
+        files : ['www/js/**/*.js'],
         options : {
-          "indent_size": 2,
-          "indent_char": " ",
-          "indent_level": 0,
-          "indent_with_tabs": false,
-          "jslint_happy": true,
-          "wrap_line_length": 80
+          'indent_size': 2,
+          'indent_char': ' ',
+          'indent_level': 0,
+          'indent_with_tabs': false,
+          'jslint_happy': true,
+          'wrap_line_length': 80
         }
     },
     watch: {
       js: {
-        files: ["js/**/*.js"],
+        files: ['www/js/**/*.js'],
         tasks: ['jshint', 'jsbeautifier']
       }
     }

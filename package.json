@@ -10,9 +10,12 @@
     "hoodie-server": "^0.9.28",
     "hoodie-plugin-appconfig": "^0.1.4",
     "hoodie-plugin-email": "^0.1.5",
-    "hoodie-plugin-users": "^0.1.1"
+    "hoodie-plugin-users": "^0.1.1",
+    "hoodie-plugin-angularjs": "0.0.17"
   },
-  "files": ["www/"],
+  "files": [
+    "www/"
+  ],
   "engines": {
     "node": ">=0.10.22"
   },
@@ -26,7 +29,8 @@
     "plugins": [
       "hoodie-plugin-appconfig",
       "hoodie-plugin-email",
-      "hoodie-plugin-users"
+      "hoodie-plugin-users",
+      "hoodie-plugin-angularjs"
     ]
   },
   "scripts": {

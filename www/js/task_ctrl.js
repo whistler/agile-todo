@@ -1,5 +1,7 @@
 angular.module('todo-app')
-    .controller('TasksCtrl', function($scope, TaskService, StorageService) {
+    .controller('TasksCtrl', function($scope, TaskService, StorageService, hoodie) {
+
+        $scope.email = hoodie.account.username;
 
         function getTimeOrder(tasks) {
             // later find the order of keys in taks
@@ -22,10 +24,10 @@ angular.module('todo-app')
             });
             return sorted_tasks;
         }
-        
+
         function mapBack(tasks) {
             _.map(tasks, function(taskList) {
-                var tasks = _.map(taskList.tasks, function (task) {
+                var tasks = _.map(taskList.tasks, function(task) {
                     task.when = taskList.name;
                     return task;
                 });

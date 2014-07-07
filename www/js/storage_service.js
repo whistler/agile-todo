@@ -5,46 +5,37 @@ angular.module('todo-app')
 
             var defaultTasks = [{
                 name: "",
-                tasks: [
-                    {   
-                        id: 1,
-                        description: 'do something',
-                        completed: false
-                    },
-                    {
-                        id: 2,
-                        description: 'something finished',
-                        completed: true
-                    }
-                ],
-            },{
-                name:"today",
-                tasks: [
-                    {    
-                        id: 3,
-                        description: 'do something',
-                        completed: false
-                    },
-                    {
-                        id: 4,
-                        description: 'something finished',
-                        completed: true
-                    }
-                ]
-            },{
+                tasks: [{
+                    id: 1,
+                    description: 'do something',
+                    completed: false
+                }, {
+                    id: 2,
+                    description: 'something finished',
+                    completed: true
+                }],
+            }, {
+                name: "today",
+                tasks: [{
+                    id: 3,
+                    description: 'do something',
+                    completed: false
+                }, {
+                    id: 4,
+                    description: 'something finished',
+                    completed: true
+                }]
+            }, {
                 name: "tomorrow",
-                tasks: [
-                    {    
-                        id: 5,
-                        description: 'do something',
-                        completed: false
-                    },
-                    {
-                        id: 6,
-                        description: 'something finished',
-                        completed: true
-                    }
-                ]   
+                tasks: [{
+                    id: 5,
+                    description: 'do something',
+                    completed: false
+                }, {
+                    id: 6,
+                    description: 'something finished',
+                    completed: true
+                }]
             }];
 
             $localStorage.tasks = defaultTasks;
